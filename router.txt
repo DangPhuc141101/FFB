@@ -1,0 +1,8 @@
+
+
+    get    /           : Index page
+    get    /:id        : Detail field page
+    post   /           : Add field page
+    put    /           : Edit field page
+
+    
