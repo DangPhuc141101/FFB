@@ -1,0 +1,51 @@
+
+.field-card{
+     width: 275px;
+     height: 340px;
+}
+
+.field-card__header{
+     width: 275px;
+     height: 180px;
+}
+
+.field-card__header__img{
+     width: 275px;
+     height: 180px;
+     overflow: hidden;
+}
+
+.field-card__content{
+     width: 275px;
+     height: 160px;
+     border: 1px solid #EDEDED;
+     
+}
+
+.field-card__content__title{
+     margin-top: 15px;
+     font-weight: bold;
+}
+
+.field-card__content__number-rating{
+     display: flex;
+     justify-content: space-between;
+     height: 30px;
+}
+
+.field-card__content__price{
+     display: flex;
+     flex-direction: row;
+     height: 25px;
+}
+
+.field-card__content__price--orange{
+     color: #FF7517;
+     font-weight: bold;
+}
+
+.field-card__content__additional{
+     display: flex;
+     flex-direction: row;
+     height: 25px;
+}
