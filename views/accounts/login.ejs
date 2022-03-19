@@ -12,14 +12,14 @@
   Đăng nhập
 </button>
 
-<div id="id01" class="modal">
-  <form class="modal-content animate" action="/action_page.php" method="post">
+<div id="id01" class="modal1">
+  <form class="modal1-content animate" action="/action_page.php" method="post">
     <div class="cancelcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Thoát">&times;</span>
      
     </div>
-    <div class="container">
-      <div class="title-login">Đăng nhập vào tài khoản</div>
+    <div class="container1">
+      <h2 class="title-login">Đăng nhập</h2>
       <label for="uname"><b>Tên đăng nhập</b></label>
       <input type="text" placeholder="Tên đăng nhập hoặc số điện thoại" name="uname" required/>
       
@@ -33,7 +33,7 @@
       <button type="submit" class="btn-login">Đăng nhập</button>
     </div>
 
-    <div class="container" style="background-color: #f1f1f1">
+    <div class="container1" style="background-color: #f1f1f1">
       <button
         type="button"
         onclick="document.getElementById('id01').style.display='none'"
@@ -47,13 +47,13 @@
 </div>
 
 <script>
-  // Get the modal
-  var modal = document.getElementById("id01");
+  // Get the modal1
+  var modal1 = document.getElementById("id01");
 
-  // When the user clicks anywhere outside of the modal, close it
+  // When the user clicks anywhere outside of the modal1, close it
   window.onclick = function (event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
+    if (event.target == modal1) {
+      modal1.style.display = "none";
     }
   };
 </script>
