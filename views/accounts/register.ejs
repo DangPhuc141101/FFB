@@ -1,0 +1,54 @@
+<link
+  href="../../public/stylesheets/Register.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Đăng ký</button>
+
+<div id="id02" class="modal2">
+  <form class="modal2-content" >
+    <div class="cancelcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Thoát">&times;</span>
+    </div>
+    <div class="container2">
+      <h1 class="title-register">Đăng ký</h1>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Nhập email của bạn" name="email" required>
+
+      <label for="phone"><b>Số điện thoại</b></label>
+      <input type="text"  placeholder="Nhập số điện thoại của bạn" name="tel" required maxlength="10">
+
+      <label for="psw"><b>Mật khẩu</b></label>
+      <input type="password" placeholder="Nhập mật khẩu của bạn" name="psw" required>
+
+      <label for="psw-repeat"><b>Xác nhận mật khẩu</b></label>
+      <input type="password"  placeholder="Nhập lại mật khẩu của bạn" name="psw-repeat" required>
+      
+
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+      <button type="submit" class="registerbtn">Đăng ký</button>
+    </div>
+    <div class="container2" style="background-color: #f1f1f1">
+      <button
+      onclick="document.getElementById('id01').style.display='block'"
+      style="width: auto"
+      class="loginbtn">
+      Đăng nhập
+    </button>
+      </div>
+  </form>
+</div>
+
+<script>
+// Get the modal2
+var modal2 = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal2, close it
+window.onclick = function(event) {
+  if (event.target == modal2) {
+    modal2.style.display = "none";
+  }
+}
+</script>

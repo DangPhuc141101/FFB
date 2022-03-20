@@ -1,0 +1,132 @@
+<link
+  href="../../public/stylesheets/form.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+<button
+  onclick="document.getElementById('id03').style.display='block'"
+  style="width: auto"
+>
+  Form Đăng ký
+</button>
+
+<div id="id03" class="modal1">
+  <form class="modal1-content animate" action="/action_page.php" method="post">
+    <h2 class="title-login">ĐĂNG KÝ THÀNH VIÊN</h2>
+    <div class="container1">
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">Họ và tên</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="fname" name="firstname" placeholder="Nhập họ và tên..." require>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-25">
+          <label for="sex">Giới tính</label>
+        </div>
+        <div class="col-75">
+          <label >Nam
+            <input type="radio" checked="checked" name="radio">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div class="col-90">
+          <label >Nữ
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-25">
+          <label for="start">Ngày sinh</label>
+        </div>
+        <div class="col-75">
+          <input type="date" name="begin"  placeholder="Nhập ngày sinh" value="" min="1900-01-01" max="2020-12-31" require>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-25">
+          <label for="country">Nơi ở</label>
+        </div>
+        <div class="col-75">
+          <select id="country" name="country" require>
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-25">
+          <label for="email">Email</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="email" placeholder="Email" name="email" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-25">
+          <label for="email">Email</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="email" placeholder="Email" name="email" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-25">
+          <label for="phone">Số điện thoại</label>
+        </div>
+        <div class="col-75">
+          <input type="text"  placeholder="Số điện thoại" name="tel" required maxlength="10">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-25">
+          <label for="address">Địa chỉ sân</label>
+        </div>
+        <div class="col-75">
+          <input type="text"  placeholder="Địa chỉ sân" name="address" required maxlength="10">
+        </div>
+      </div>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="submitbtn">Gửi</button>
+      </div>
+    </div>
+
+    <!-- <div class="container1" style="background-color: #f1f1f1">
+      <button
+        type="button"
+        onclick="document.getElementById('id02').style.display='none'"
+        class="registerbtn"
+      >
+        Đăng kí
+      </button>
+      
+    </div> -->
+  </form>
+</div>
+
+<script>
+  // Get the modal1
+  var modal1 = document.getElementById("id03");
+
+  // When the user clicks anywhere outside of the modal1, close it
+  window.onclick = function (event) {
+    if (event.target == modal1) {
+      modal1.style.display = "none";
+    }
+  };
+</script>

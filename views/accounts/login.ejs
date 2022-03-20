@@ -1,0 +1,56 @@
+<link
+  href="../../public/stylesheets/style.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+<button
+  onclick="document.getElementById('id01').style.display='block'"
+  style="width: auto"
+>
+  Đăng nhập
+</button>
+
+<div id="id01" class="modal1">
+  <form class="modal1-content animate" action="/action_page.php" method="post">
+    <div class="cancelcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Thoát">&times;</span>
+    </div>
+
+    <div class="container1">
+      <h2 class="title-login">Đăng nhập</h2>
+      <label for="uname"><b>Tên đăng nhập</b></label>
+      <input type="text" onfocus="this.value=''" placeholder="Tên đăng nhập hoặc số điện thoại" name="uname" required/>
+      
+      <label for="psw"><b>Mật khẩu</b></label>
+      <input type="password" onfocus="this.value=''" placeholder="Nhập mật khẩu" name="psw" required />
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" /> Ghi nhớ đăng nhập
+      </label>
+      <span class="psw"> <a href="#">Quên mật khẩu</a></span>
+      <button type="submit" class="btn-login">Đăng nhập</button>
+    </div>
+
+    <div class="container1" style="background-color: #f1f1f1">
+      <button 
+        onclick="document.getElementById('id02').style.display='block'" 
+        style="width:auto;"
+        class="registerbtn"
+        >
+        Đăng ký</button>
+    </div>
+  </form>
+</div>
+
+<script>
+  // Get the modal1
+  var modal1 = document.getElementById("id01");
+
+  // When the user clicks anywhere outside of the modal1, close it
+  window.onclick = function (event) {
+    if (event.target == modal1) {
+      modal1.style.display = "none";
+    }
+  };
+</script>
