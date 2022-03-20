@@ -24,7 +24,14 @@ module.exports.createField = async(req, res) =>{
     console.log(req.body)
 }
 
-module.exports.deletefield = async(req, res) =>{
+module.exports.deleteField = async(req, res) =>{
     const { id } = req.params;
     const field = await Field.findByIdAndDelete(id);
+    res.redirect('/');
+}
+
+module.exports.editField = async(req, res) => {
+    const { price } = req.body;
+    const { address } = req.body;
+    const { name, category, description} = req.body.field;
 }

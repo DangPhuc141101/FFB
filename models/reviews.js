@@ -7,7 +7,7 @@ const reviewSchema = new mongoose.Schema({
     commnent: String,
     author: {
         type: Schema.Types.ObjectId,
-        ref: 'User'
+        ref: 'Account'
     }
 })
 
