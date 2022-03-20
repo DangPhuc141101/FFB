@@ -1,0 +1,47 @@
+<% layout('layouts/boilerplate') %>
+
+<script src="https://cdn.jsdelivr.net/npm/@goongmaps/goong-js@1.0.9/dist/goong-js.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/@goongmaps/goong-js@1.0.9/dist/goong-js.css" rel="stylesheet" />
+
+
+<div id="map" style="height:300px"></div> -->
+<!-- <script src="/socket.io/socket.io.js"></script> -->
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<script>
+    $(function () {
+            var socket = io();
+            console.log(socket)
+        });
+</script>
+<script>
+    const input = "Trung tâm thể thao Hải Châu, Đà Nẵng";
+    const API_KEY = "WjuzkGPjpvcE8UDOAZeBEhwrCezSUppN1We2zgJU"
+    var lat, lng;
+    fetch(`https://rsapi.goong.io/Place/AutoComplete?api_key=DUdJgN4L4Gvdvr2R2OhzfdBVATMJr0P9AMAnVMzi&location=21.013715429594125,%20105.79829597455202&input=${input}`)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+            const place_id = data.predictions[0].place_id;
+            fetch(`https://rsapi.goong.io/Place/Detail?place_id=${place_id}&api_key=${API_KEY}`)
+                .then(response => response.json())
+                .then(data => {
+                    lat = data.result.geometry.location.lat;
+                    lng = data.result.geometry.location.lng;
+
+                    goongjs.accessToken = 'JyG9hg1f9TNAS3v9gHvseV28kjP3rC8L2S9dYquF';
+                    var map = new goongjs.Map({
+                        container: 'map', // container id
+                        style: 'https://tiles.goong.io/assets/goong_map_web.json', // stylesheet location
+                        center: [lng, lat], // starting position [lng, lat]
+                        zoom: 12 // starting zoom
+                    });
+
+                    var marker = new goongjs.Marker()
+                        .setLngLat([lng, lat])// position add marker [lng, lat]
+                        .addTo(map);
+                    //console.log(data.result.geometry.location);
+                })
+        })
+
+</script>
