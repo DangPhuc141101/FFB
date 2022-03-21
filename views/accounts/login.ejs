@@ -1,29 +1,18 @@
-<link
-  href="../../public/stylesheets/style.css"
-  rel="stylesheet"
-  type="text/css"
-/>
-
-<button
-  onclick="document.getElementById('id01').style.display='block'"
-  style="width: auto"
->
-  Đăng nhập
-</button>
+<link rel="stylesheet" href="/stylesheets/style.css">
 
 <div id="id01" class="modal1">
-  <form class="modal1-content animate" action="/action_page.php" method="post">
+  <form class="modal1-content animate" action="/accounts/login" method="post">
     <div class="cancelcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Thoát">&times;</span>
     </div>
 
     <div class="container1">
       <h2 class="title-login">Đăng nhập</h2>
-      <label for="uname"><b>Tên đăng nhập</b></label>
-      <input type="text" onfocus="this.value=''" placeholder="Tên đăng nhập hoặc số điện thoại" name="uname" required/>
+      <label for="username"><b>Số điện thoại</b></label>
+      <input type="text" onfocus="this.value=''" placeholder="Số điện thoại" name="username" required/>
       
-      <label for="psw"><b>Mật khẩu</b></label>
-      <input type="password" onfocus="this.value=''" placeholder="Nhập mật khẩu" name="psw" required />
+      <label for="password"><b>Mật khẩu</b></label>
+      <input type="password" onfocus="this.value=''" placeholder="Nhập mật khẩu" name="password" required />
       
       <label>
         <input type="checkbox" checked="checked" name="remember" /> Ghi nhớ đăng nhập

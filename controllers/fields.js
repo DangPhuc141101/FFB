@@ -3,15 +3,17 @@ const Field = require('../models/fields');
 // return json fields index
 module.exports.index = async(req, res) => {
     const fields = await Field.find({});
-    res.render('fields/index')
+    console.log("index page");
+    res.render('fields/index', {fields});
 }
 
 // return json field detail
 module.exports.show =  async(req, res) => {
     const { id } = req.params;
-    //const field = await Field.findById(id);
+    const field = await Field.findById(id);
     //res.json(field);
-    res.render('fields/show');
+    console.log("show page")
+    res.render('fields/show', {field});
 }
 
 // create field

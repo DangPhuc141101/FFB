@@ -12,11 +12,14 @@
         </div>
 
         <div class="navbar-nav ms-auto">
-          <a href="/accounts/login" class="nav-link">Đăng nhập</a>
+          <a href="#" class="nav-link" onclick="document.getElementById('id03').style.display='block'">Form đăng ký thành viên</a>
+          <% if (!currentUser) { %> 
+          <a href="#" class="nav-link" onclick="document.getElementById('id01').style.display='block'">Đăng nhập</a>
           
-          <a href="/accounts/register" class="nav-link">Đăng ký</a>
-          
+          <a href="#" class="nav-link"  onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Đăng ký</a>
+          <% } else {%>
           <a href="/accounts/logout" class="nav-link">Đăng xuất</a>
+          <% }%>
         </div>
     </div>
     </div>

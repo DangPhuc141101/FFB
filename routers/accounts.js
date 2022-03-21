@@ -6,7 +6,7 @@ const catchAsync = require('../utils/catchAsyncError');
 const accountController = require('../controllers/accounts');
 
 router.post('/register', catchAsync(accountController.createAccount))
-router.post('/login', passport.authenticate('local', { failureFlash: true, failureRedirect: '/login' }), accountController.login)
+router.post('/login', passport.authenticate('local', { failureFlash: true, failureRedirect: '/accounts/login' }), accountController.login)
 router.get('/logout', accountController.logout);  
 
 module.exports = router;

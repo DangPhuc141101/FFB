@@ -6,11 +6,11 @@ router.get('/map', async (req, res) => {
     res.render('map');
 })
 
-// router detail field
-router.get('/:id',fields.show)
-
 // router all field
 router.get('/', fields.index);
+
+// router detail field
+router.get('/:id',fields.show)
 
 // router add field
 router.post('/', fields.createField)
