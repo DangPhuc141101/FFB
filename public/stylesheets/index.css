@@ -1,7 +1,14 @@
+.index-page-container{
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: space-between;
+}
 
 .field-card{
      width: 275px;
      height: 340px;
+     margin: 3px;
 }
 
 .field-card__header{
@@ -49,4 +56,3 @@
      flex-direction: row;
      height: 25px;
 }
-
