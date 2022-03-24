@@ -14,12 +14,22 @@
 .field-card__header{
      width: 275px;
      height: 180px;
+     display: inline-grid;
+     position: relative;
 }
 
 .field-card__header__img{
      width: 275px;
      height: 180px;
      overflow: hidden;
+}
+.icon-bar i{
+     position: absolute;
+     top: 0;
+     right: 0;
+     /* background-color:rgba(255, 255, 255, 0.947); */
+     margin-right: 5px;
+     font-size: 30px;
 }
 
 .field-card__content{
@@ -56,3 +66,5 @@
      flex-direction: row;
      height: 25px;
 }
+
+
