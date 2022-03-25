@@ -1,0 +1,107 @@
+
+    <link href="../../public/stylesheets/UpdateFormOwner.css" rel="stylesheet" type="text/css">
+   
+    <div id="id01" class="modal">
+        <h3>Cập nhật sân</h3>
+        <form class="modal-content" action="/action_page.php">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+              <div class="page-content">
+                <div class="page-content-left">
+                <div class="row">
+                      <label for="name"  class="labels"   >Tên sân bóng:</label>
+                      <input type="text" id="name" name="nameStadium" placeholder="Tên sân bóng" require>
+                  </div>
+
+                <div class="row">
+                      <label for="number" class="labels">Số người: </label>
+                      <input type="number" id="number" name="nameStadium" placeholder="Số người" require>
+                </div>
+
+                <div class="row">
+                      <label for="address" class="labels">Địa điểm: </label>
+                      <input type="text" id="address" name="nameStadium" placeholder="Địa điểm" require>
+                </div>
+
+                <div class="row">
+                      <label for="utilities" class="labels">Tiện ích: </label>
+                      <input type="text" id="utilities" name="nameStadium" placeholder="Tiện ích" >
+                </div>
+
+                <div class="row">
+                      <label for="subject"class="labels">Mô tả: </label>
+                      <textarea id="subject" name="subject" placeholder="Mô tả..." style="height:200px; width: 200px;"></textarea>
+                </div>
+        </div>
+        <div class="page-content-right">
+            <div class="choose-image">
+                  <input id="fileupload" type="file" accept="image/*" multiple="multiple" />
+                    <div id="dvPreview" style="margin-left: '5px';"> </div>
+            </div>
+            <div class="atTime">
+                <div class="Time">
+                    <label for="startTime"class="Time">Giờ bắt đầu: </label>
+                    <input type="time" id="startTime" name="startTime" min="00:00" max="23:59" required>
+                </div>
+                <div class="Time">
+                    <label for="endTime"class="Time">Giờ kết thúc: </label>
+                    <input type="time" id="endTime" name="endTime" min="00:00" max="23:59" required>
+                </div>
+                <div class="Time">
+                    <label for="price"class="Time">Giá: </label>
+                    <input class="prices" type="number" id="price" name="price" min="100 000" required>
+                    <label for="price"class="Time">VND </label>
+                </div>
+                <div class="Time">
+                <button type="submit" class="submitbtn">Thêm mới</button>
+                </div>
+            </div>
+            <button type="submit" class="btn-add">Cập nhật</button>
+        </div>
+        </div>
+        </form>
+    </div>
+
+    <!-- Preview file image -->
+<script language="javascript" type="text/javascript">
+        window.onload = function () {
+            var fileUpload = document.getElementById("fileupload");
+            fileUpload.onchange = function () {
+                if (typeof (FileReader) != "undefined") {
+                    var dvPreview = document.getElementById("dvPreview");
+                    dvPreview.innerHTML = "";
+                    var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
+                    for (var i = 0; i < fileUpload.files.length; i++) {
+                        var file = fileUpload.files[i];
+                        if (regex.test(file.name.toLowerCase())) {
+                            var reader = new FileReader();
+                            reader.onload = function (e) {
+                                var img = document.createElement("IMG");
+                                img.height = "70";
+                                img.width = "70";
+                                img.src = e.target.result;
+                                dvPreview.appendChild(img);
+                            }
+                            reader.readAsDataURL(file);
+                        } else {
+                            alert(file.name + " is not a valid image file.");
+                            dvPreview.innerHTML = "";
+                            return false;
+                        }
+                    }
+                } else {
+                    alert("This browser does not support HTML5 FileReader.");
+                }
+            }
+        };
+    </script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        </script>

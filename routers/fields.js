@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const fields = require('../controllers/fields');
 
+
 // router detail field
 router.get('/:id',fields.show)
 
