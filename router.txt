@@ -1,8 +1,10 @@
 
 
-    get    /           : Index page
-    get    /:id        : Detail field page
+    get    /fields          : Index page
+    get    /fields/:id        : Detail field page
     post   /           : Add field page
     put    /           : Edit field page
 
-    
+    get     /fields/owner   : index owner phai dang nhap       username: 012345   pw: admin
+    get     /fields/new     : new field phai dang nhap   
+    get     /fields/:id/edit: edit field

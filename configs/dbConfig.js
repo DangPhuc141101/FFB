@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
-const urlDB = 'mongodb://localhost:27017/field-foot-ball';
+const urlDB = process.env.LOCAL_DB || process.env.URL_DB;
 //process.env.URL_DB || 
+console.log(process.env.URL_DB)
 const connectDB = ()=>{
     mongoose.connect(urlDB, {
         useNewUrlParser: true,

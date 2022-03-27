@@ -1,33 +1,41 @@
-<link href="../../public/stylesheets/index.css" rel="stylesheet" type="text/css">
+<link href="/stylesheets/index.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 <% layout('layouts/boilerplate') %>
 
-
-    <h1>This is index page</h1>
+    <h1>This is owner page</h1>
     <div class="index-page-container">
-        <% for(let i=0;i<5;i++){%>
+        <% for(let field of fields){%>
             <div class="field-card card">
                 <div class="field-card__header">
                     <img
-                        src="https://cdn.pixabay.com/photo/2020/06/30/19/42/the-soccer-field-5357418_1280.jpg"
+                        src="<%=field.images[0].url%>"
                         alt=""
                         class="field-card__header__img"
                     />
-                    <div class="icon-bar">
+                   
+                    <!-- <div class="icon-bar">
                         <a href="#"><i class="bi bi-pencil-square"></i></a> 
-                      </div>
+                      </div> -->
                 </div>
+             
                 <div class="field-card__content">
+                    <div class="icon-bar">
+                        <a href="/fields/<%=field._id%>/edit"><i class="bi bi-pencil-square"></i></a>
+                        <a href="/fields/<%=field._id%>/edit"><i class="bi bi-trash3"></i></a>
+                      </div>
                     <div class="field-card__content__title">
-                        Sân bóng Yên Hòa - Cầu Giấy
+                        <%=field.name%>
                     </div>
                     <div class="field-card__content__number-rating">
-                        <p>Số người: 7</p>
+                        <p>Số người: <%=field.category%></p>
                         <p>⭐⭐⭐⭐⭐</p>
                     </div>
                     <div class="field-card__content__price">
                         <p>Giá </p>
                         <p class="field-card__content__price--orange">
-                            300.000đ - 1000.000đ
+                            <%const prices = field.prices.map(e => e.price);%>
+                        <%const min = Math.min(...prices), max = Math.max(...prices)%>
+                        <%=min%>đ - <%=max%>đ 
                         </p>
                         <p>/ Trận</p>
                     </div>

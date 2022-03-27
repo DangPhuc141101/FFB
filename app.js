@@ -52,7 +52,6 @@ passport.use(new LocalStrategy(Account.authenticate()));
 passport.serializeUser(Account.serializeUser());
 passport.deserializeUser(Account.deserializeUser());
 
-
 app.use((req, res, next) => {
     res.locals.currentUser = req.user;
     res.locals.success = req.flash('success');
@@ -62,15 +61,25 @@ app.use((req, res, next) => {
 
 const fieldRouter = require('./routers/fields');
 const accountRouter = require('./routers/accounts');
+const bookingRouter = require('./routers/bookings');
 
-app.use('/', fieldRouter);
+// Test here 
+// app.get('/test', (req, res) => {
+//     res.render('fields/show');
+// })
+
+app.use('/fields', fieldRouter);
+app.use('/:id/bookings', bookingRouter);
 app.use('/accounts', accountRouter);
 
+app.get('/', (req, res) => {
+    res.render('home');
+})
 app.all('*', (req, res, next) => {
     next(new ExpressError('Page not found', 404));
 });
 
-app.use((err, req, res, next) => {
+app.use((err, req, res, next) => {console.log(err)
     const {statusCode = 500, message = 'Something went wrong'} = err;
     if (!err.message) error.message = 'Oh no, Something went wrong!';
     res.status(statusCode).render('error', {err});

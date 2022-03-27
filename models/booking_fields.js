@@ -5,7 +5,16 @@ const mongoose = require('mongoose');
 const bookingFieldSchema = new mongoose.Schema({
     status :{
         type: String,
-        enum: ['Confirmed', 'Canceled', 'Ticketed', 'Voided']
+        enum: ['Confirmed', 'Canceled', 'Ticketed', 'Voided'],
+        default: 'Ticketed'
+    },
+    date_booking : {
+        type: Date
+    },
+    price : {
+        start: String,
+        end: String,
+        price: Number
     },
     field : {
         type: mongoose.Schema.Types.ObjectId,
@@ -17,4 +26,4 @@ const bookingFieldSchema = new mongoose.Schema({
     }
 }, { timestamps: { createdAt: 'created_at' } });
 
-module.exports = mongoose.Model('BookingField', bookingFieldSchema);
+module.exports = mongoose.model('BookingField', bookingFieldSchema);

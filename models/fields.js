@@ -6,27 +6,6 @@ const imageSchema = new mongoose.Schema({
     filename: String
 })
 
-//  Create geometry schema
-const geometrySchema = new mongoose.Schema({
-    type: {
-        type: String,
-        enum: ['Point'],
-        required: true
-    },
-    coordinates: {
-        type: [Number],
-        required: true
-    }
-})
-
-// Create address schema
-const addressSchema = new mongoose.Schema({
-    streetAddreess: String,
-    city: String,
-    district: String,
-    geometry: geometrySchema
-})
-
 // Create price schema
 const priceSchema = new mongoose.Schema({
     start: String,
@@ -37,11 +16,27 @@ const priceSchema = new mongoose.Schema({
 // Create field schema
 const fieldSchema = new mongoose.Schema({
     name: String,
-    price: [priceSchema],
+    prices: [priceSchema],
     category: String,
     description: String,
-    images: imageSchema,
-    address: addressSchema
+    images: [imageSchema],
+    address: String,
+    utilities: [String],
+    geometry: {
+        type: {
+            type: String,
+            enum: ['Point'],
+            required: true
+        },
+        coordinates: {
+            type: [Number],
+            required: true
+        }
+    },
+    author: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+    },
 })
 
 module.exports = mongoose.model('Field', fieldSchema);

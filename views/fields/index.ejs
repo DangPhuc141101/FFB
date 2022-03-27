@@ -2,15 +2,16 @@
 <% layout('layouts/boilerplate') %>
 
 <div class="index-page-container">
-    <% for (let field of fields){%>
+    <%let i=0; for (let field of fields){ %>
         <div class="field-card card">
             <div class="field-card__header">
                 <img src="https://cdn.pixabay.com/photo/2020/06/30/19/42/the-soccer-field-5357418_1280.jpg" alt=""
                     class="field-card__header__img" />
             </div>
+        
             <div class="field-card__content">
                 <div class="field-card__content__title">
-                    <a href="/<%=field._id%>"><%= field.name%></a>
+                    <a href="/fields/<%=field._id%>"><%= field.name%></a>
                 </div>
                 <div class="field-card__content__number-rating">
                     <p>Số người: <%=field.category%></p>
@@ -19,7 +20,9 @@
                 <div class="field-card__content__price">
                     <p>Giá </p>
                     <p class="field-card__content__price--orange">
-                        <%=field.price[0].price%>>đ - <%=field.price[0].price%>đ
+                        <%const prices = field.prices.map(e => e.price);%>
+                        <%const min = Math.min(...prices), max = Math.max(...prices)%>
+                        <%=min%>đ - <%=max%>đ 
                     </p>
                     <p>/ Trận</p>
                 </div>
@@ -30,5 +33,5 @@
                 </div>
             </div>
         </div>
-        <%}%>
+        <% }%>
 </div>

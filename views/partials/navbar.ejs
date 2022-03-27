@@ -12,11 +12,11 @@
         </div>
 
         <div class="navbar-nav ms-auto">
-          <a href="#" class="nav-link" onclick="document.getElementById('id03').style.display='block'">Form đăng ký thành viên</a>
+          <a href="#" class="nav-link" onclick="blockForm('id03', 'id01', 'id02')">Form đăng ký thành viên</a>
           <% if (!currentUser) { %> 
-          <a href="#" class="nav-link" onclick="document.getElementById('id01').style.display='block'">Đăng nhập</a>
+          <a href="#" class="nav-link" onclick="blockForm('id01', 'id03', 'id02')">Đăng nhập</a>
           
-          <a href="#" class="nav-link"  onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Đăng ký</a>
+          <a href="#" class="nav-link"  onclick="blockForm('id02', 'id01', 'id03')" style="width:auto;">Đăng ký</a>
           <% } else {%>
           <a href="/accounts/logout" class="nav-link">Đăng xuất</a>
           <% }%>
@@ -24,3 +24,10 @@
     </div>
     </div>
 </nav>
+<script>
+  function blockForm(formBlock, formNone1, formNode2){
+    document.getElementById(formBlock).style.display='block';
+    document.getElementById(formNone1).style.display='none';
+    document.getElementById(formNode2).style.display='none';
+  }
+</script>

@@ -1,11 +1,10 @@
 const express = require('express');
 const router = express.Router();
+const bookingController = require('../controllers/bookings');
 
-router.post('/bookings', (req, res) => {
-    res.send("Order field")
-})
+router.post('/', bookingController.createBooking);
 
-router.delete('/bookings', (req, res) => {
+router.delete('/', (req, res) => {
     res.send("Cancel field");
 })
 
