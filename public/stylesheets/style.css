@@ -1,7 +1,7 @@
 body {font-family: Arial, Helvetica, sans-serif;}
 
 /* Full-width input fields */
-.input, .input {
+.input {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -61,7 +61,7 @@ button:hover {
   color: #000;
 }
 
-.container1 {
+.containerLogin {
   padding: 16px;
 }
 
@@ -71,7 +71,7 @@ span.psw {
 }
 
 /* The Modal (background) */
-.modal1 {
+.modalLogin {
   display: none; /* Hidden by default */
   position:fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -86,7 +86,7 @@ span.psw {
 }
 
 /* Modal Content/Box */
-.modal1-content {
+.modalLogin-content {
   background-color: #fefefe;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;

@@ -71,13 +71,13 @@ button:hover {
   color: #000;
 }
 
-/* Add padding to container2 elements */
-.container2 {
+/* Add padding to containerRegister elements */
+.containerRegister {
   padding: 16px;
 }
 
 /* The Modal (background) */
-.modal2 {
+.modalRegister {
   display: none; /* Hidden by default */
   position:absolute; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -94,7 +94,7 @@ button:hover {
 }
 
 /* Modal Content/Box */
-.modal2-content {
+.modalRegister-content {
   background-color: #fefefe;
   border: 1px solid #888;
   width: 60%;

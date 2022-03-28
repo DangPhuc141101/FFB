@@ -63,10 +63,10 @@ const fieldRouter = require('./routers/fields');
 const accountRouter = require('./routers/accounts');
 const bookingRouter = require('./routers/bookings');
 
-// Test here 
-// app.get('/test', (req, res) => {
-//     res.render('fields/show');
-// })
+//Test here 
+app.get('/test', (req, res) => {
+    res.render('fields/Owner/index');
+})
 
 app.use('/fields', fieldRouter);
 app.use('/:id/bookings', bookingRouter);

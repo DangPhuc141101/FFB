@@ -1,12 +1,12 @@
 <link rel="stylesheet" href="/stylesheets/style.css">
 
-<div id="id01" class="modal1">
-  <form class="modal1-content animate" action="/accounts/login" method="post">
+<div id="idLogin" class="modalLogin">
+  <form class="modalLogin-content animate" action="/accounts/login" method="post">
     <div class="cancelcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Thoát">&times;</span>
+      <span onclick="document.getElementById('idLogin').style.display='none'" class="close" title="Thoát">&times;</span>
     </div>
 
-    <div class="container1">
+    <div class="containerLogin">
       <h2 class="title-login">Đăng nhập</h2>
       <label for="username"><b>Số điện thoại</b></label>
       <input class="input" type="text" onfocus="this.value=''" placeholder="Số điện thoại" name="username" required/>
@@ -18,10 +18,10 @@
         <input type="checkbox" checked="checked" name="remember" /> Ghi nhớ đăng nhập
       </label>
       <span class="psw"> <a href="#">Quên mật khẩu</a></span>
-      <button class="input" type="submit" class="btn-login">Đăng nhập</button>
+      <button type="submit" class="btn-login">Đăng nhập</button>
     </div>
 
-    <div class="container1" style="background-color: #f1f1f1">
+    <div class="containerLogin" style="background-color: #f1f1f1">
       <button 
         onclick="document.getElementById('id02').style.display='block'" 
         style="width:auto;"
@@ -33,13 +33,13 @@
 </div>
 
 <script>
-  // Get the modal1
-  var modal1 = document.getElementById("id01");
+  // Get the modalLogin
+  var modalLogin = document.getElementById("idLogin");
 
-  // When the user clicks anywhere outside of the modal1, close it
+  // When the user clicks anywhere outside of the modalLogin, close it
   window.onclick = function (event) {
-    if (event.target == modal1) {
-      modal1.style.display = "none";
+    if (event.target == modalLogin) {
+      modalLogin.style.display = "none";
     }
   };
 </script>
