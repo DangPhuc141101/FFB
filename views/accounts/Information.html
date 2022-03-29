@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information</title>
+    <link href="/stylesheets/Information.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+        <h2 class="title-login">ĐĂNG KÝ THÀNH VIÊN</h2>
+        <div class="container5">
+            <div class="row">
+              <div class="col-25">
+                <label for="fname">Họ và tên</label>
+              </div>
+              <div class="col-75">
+                <input class="inputInfor" type="text" id="fname" name="firstname" onfocus="this.value=''" value="Blabla" require>
+                <!-- <input type="text" onfocus="this.value=''" value="Blabla"> -->
+              </div>
+            </div>
+      
+            <div class="row">
+              <div class="col-25">
+                <label for="start">Ngày sinh</label>
+              </div>
+              <div class="col-75">
+                <input type="date" name="begin"  placeholder="Nhập ngày sinh" value="" min="1900-01-01" max="2020-12-31" require>
+              </div>
+            </div>
+      
+            <div class="row">
+              <div class="col-25">
+                <label for="country">Nơi ở</label>
+              </div>
+              <div class="col-75">
+                <select class="inputInfor" id="country" name="country" require>
+                  <option value="australia">Australia</option>
+                  <option value="canada">Canada</option>
+                  <option value="usa">USA</option>
+                </select>
+              </div>
+            </div>
+      
+            <div class="row">
+              <div class="col-25">
+                <label for="email">Email</label>
+              </div>
+              <div class="col-75">
+                <input class="inputInfor" type="text" id="email" placeholder="Email" name="email" required>
+              </div>
+            </div>
+      
+            <div class="row">
+              <div class="col-25">
+                <label for="phone">Số điện thoại</label>
+              </div>
+              <div class="col-75">
+                <input class="inputInfor" type="text"  placeholder="Số điện thoại" name="tel" required maxlength="10">
+              </div>
+            </div>
+      
+            <div class="row">
+              <div class="col-25">
+                <label for="address">Địa chỉ sân</label>
+              </div>
+              <div class="col-75">
+                <input class="inputInfor" type="text"  placeholder="Địa chỉ sân" name="address" required maxlength="10">
+              </div>
+            </div>
+      
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id05').style.display='none'" class="cancelbtn">Cancel</button>
+              <button class="btn-submit" type="submit" class="submitbtn">Gửi</button>
+            </div>
+        </div>
+</body>
+</html>
