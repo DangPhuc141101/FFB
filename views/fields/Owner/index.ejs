@@ -31,7 +31,7 @@
                         <p>⭐⭐⭐⭐⭐</p>
                     </div>
                     <div class="field-card__content__price">
-                        <p>Giá </p>
+                        <p>Giá: &nbsp; </p>
                         <p class="field-card__content__price--orange">
                             <%const prices = field.prices.map(e => e.price);%>
                         <%const min = Math.min(...prices), max = Math.max(...prices)%>
@@ -41,8 +41,15 @@
                     </div>
         
                     <div class="field-card__content__additional">
-                        <p>🗸wifi</p>
-                        <p>🗸căng tin</p>
+                        <p>
+                            <i class="bi bi-check2"></i>
+                            Wifi
+                            &emsp; 
+                        </p>
+                        <p>
+                            <i class="bi bi-check2"></i>
+                            Căng tin
+                        </p>
                     </div>
                 </div>
             </div>
