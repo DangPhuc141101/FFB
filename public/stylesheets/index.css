@@ -1,36 +1,49 @@
+.field-header_title{
+     display: flex;
+     justify-content: space-between;
+}
+.field-header_title p{
+     font-size: 30px;
+}
+.field-header_title .btn-add-field{
+     width: 10%;
+     border-radius: 10px;
+}
 .index-page-container{
      display: flex;
      flex-direction: row;
      flex-wrap: wrap;
      justify-content: space-between;
+     margin-bottom: 20px;
 }
 
 .field-card{
      width: 275px;
      height: 340px;
-     margin: 3px;
+     margin: 20px;
 }
 
 .field-card__header{
-     width: 275px;
-     height: 180px;
+     
+     height: 160px;
 }
 
 .field-card__header__img{
-     width: 275px;
-     height: 180px;
+     width: 273px;
+     height: 160px;
      overflow: hidden;
 }
 
 .field-card__content{
-     width: 275px;
+     
      height: 160px;
-     border: 1px solid #EDEDED;
+     /* border: 1px solid #EDEDED; */
+     margin-left: 10px;
+     margin-right: 5px;
      
 }
 
 .field-card__content__title{
-     margin-top: 15px;
      font-weight: bold;
 }
 
@@ -55,4 +68,15 @@
      display: flex;
      flex-direction: row;
      height: 25px;
+}
+
+/* Change button update and delete field cards */
+.icon-bar{
+     display: flex;
+     justify-content: space-between;
+}
+.icon-bar .btn-form_field{
+     width: 100%;
+     border-radius: 10px;
+     margin-bottom: 10px;
 }

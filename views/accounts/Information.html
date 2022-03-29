@@ -8,61 +8,63 @@
     <link href="../../public/stylesheets/Information.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+    <div class="page-content_info">
         <h2 class="title-login">CẬP NHẬT THÔNG TIN</h2>
         <div class="container5">
-            <div class="row">
-              <div class="col-25">
+            <div class="rowInfo">
+              <div class="col-25-Info">
                 <label for="fname">Họ và tên</label>
               </div>
-              <div class="col-75">
-                <input class="inputInfor" type="text" id="fname" name="firstname" onfocus="this.value=''" value="Blabla" require>
+              <div class="col-75-Info">
+                <input class="inputInformation" type="text" id="fname" name="firstname" onfocus="this.value=''" value="Blabla" require>
               </div>
             </div>
       
-            <div class="row">
-              <div class="col-25">
+            <div class="rowInfo">
+              <div class="col-25-Info">
                 <label for="start">Ngày sinh</label>
               </div>
-              <div class="col-75">
-                <input type="date" name="begin"  placeholder="Nhập ngày sinh" value="" min="1900-01-01" max="2020-12-31" require>
+              <div class="col-75-Info">
+                <input class="inputInformation" type="date" name="begin"  placeholder="Nhập ngày sinh" value="" min="1900-01-01" max="2020-12-31" require>
               </div>
             </div>
       
-            <div class="row">
-              <div class="col-25">
+            <div class="rowInfo">
+              <div class="col-25-Info">
                 <label for="country">Nơi ở</label>
               </div>
-              <div class="col-75">
-                <select class="inputInfor" id="country" name="country" require>
-                  <option value="australia">Australia</option>
-                  <option value="canada">Canada</option>
-                  <option value="usa">USA</option>
+              <div class="col-75-Info">
+                <select class="inputInformation" id="country" name="country" require>
+                  <option value="DaNang">Đà Nẵng</option>
+                  <option value="HaNoi">Hà Nội</option>
+                  <option value="HoChiMinh">Hồ Chí Minh</option>
                 </select>
               </div>
             </div>
       
-            <div class="row">
-              <div class="col-25">
+            <div class="rowInfo">
+              <div class="col-25-Info">
                 <label for="email">Email</label>
               </div>
-              <div class="col-75">
-                <input class="inputInfor" type="text" id="email" placeholder="Email" name="email" required>
+              <div class="col-75-Info">
+                <input class="inputInformation" type="text" id="email" placeholder="Email" name="email" required>
               </div>
             </div>
       
-            <div class="row">
-              <div class="col-25">
+            <div class="rowInfo">
+              <div class="col-25-Info">
                 <label for="phone">Số điện thoại</label>
               </div>
-              <div class="col-75">
-                <input class="inputInfor" type="text"  placeholder="Số điện thoại" name="tel" required maxlength="10">
+              <div class="col-75-Info">
+                <input class="inputInformation" type="text"  placeholder="Số điện thoại" name="tel" required maxlength="10">
               </div>
             </div>
       
-            <div class="clearfix">
-              <button type="button" onclick="document.getElementById('id05').style.display='none'" class="cancelbtn">Cancel</button>
-              <button class="btn-submit" type="submit" class="submitbtn">Sửa</button>
+            <div class="clearfixInfo">
+              <button type="button" onclick="document.getElementById('id05').style.display='none'" class="submitbtn3" style="background-color: #f44336;">Huỷ</button>
+              <button type="submit" class="submitbtn3">Cập nhật</button>
             </div>
         </div>
+      </div>
 </body>
 </html>

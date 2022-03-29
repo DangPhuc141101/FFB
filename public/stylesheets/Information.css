@@ -1,11 +1,15 @@
 body {font-family: Arial, Helvetica, sans-serif;}
 
+.page-content_info{ 
+  margin-left: 20%;
+  margin-right: 20%;
+}
 /* Full-width input fields */
-.inputInfor {
-    width: 100%;
+.inputInformation, select {
+    width: 80%;
     padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 20px;
+    border-radius: 10px;
     resize: vertical;
   }
   
@@ -14,7 +18,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
     display: inline-block;
   }
   
-  .btn-submit {
+  .submitbtn3 {
     background-color: #04AA6D;
     color: white;
     padding: 12px 20px;
@@ -22,31 +26,25 @@ body {font-family: Arial, Helvetica, sans-serif;}
     border-radius: 20px;
     cursor: pointer;
     float: right;
-  }
-  
-  .btn-submit:hover {
-    background-color: #45a049;
+    margin-top: 30px;
+    width: 20%;
   }
 
-  .col-25 {
+  .col-25-Info {
     float: left;
     width: 25%;
     margin-top: 6px;
   }
   
-  .col-75 {
+  .col-75-Info {
     float: left;
     width: 75%;
     margin-top: 6px;
   }
-  .col-90 {
-    float: left;
-    width: 90%;
-    margin-top: 6px;
-  }
+
   
   /* Clear floats after the columns */
-  .row:after {
+  .rowInfo:after {
     content: "";
     display: table;
     clear: both;
@@ -110,24 +108,20 @@ span.psw {
 
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
+  .col-25-Info, .col-75-Info, input[type=submit] {
     width: 100%;
     margin-top: 0;
   }
 }
-.cancelbtn {
-    padding: 14px 20px;
-    background-color: #f44336;
-  }
-  
-  /* Float cancel and submit buttons and add an equal width */
-  .cancelbtn, .submitbtn {
-    float: left;
-    width: 50%;
-  }
 
+.clearfixInfo{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-left:15%;
+}
 /* Clear floats */
-.clearfix::after {
+.clearfixInfo::after {
     content: "";
     clear: both;
     display: table;
@@ -135,7 +129,7 @@ span.psw {
   
   /* Change styles for cancel button and signup button on extra small screens */
   @media screen and (max-width: 300px) {
-    .cancelbtn, .submitbtn {
+     .submitbtn3 {
        width: 100%;
     }
   }
