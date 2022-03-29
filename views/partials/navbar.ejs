@@ -12,11 +12,11 @@
         </div>
 
         <div class="navbar-nav ms-auto">
-          <a href="#" class="nav-link" onclick="blockForm('id03', 'id01', 'id02')">Form đăng ký thành viên</a>
+          <a href="#" class="nav-link" onclick="blockForm('id05', 'idLogin', 'idRegister')">Form đăng ký thành viên</a>
           <% if (!currentUser) { %> 
-          <a href="#" class="nav-link" onclick="blockForm('id01', 'id03', 'id02')">Đăng nhập</a>
+          <a href="#" class="nav-link" onclick="blockForm('idLogin', 'id05', 'idRegister')">Đăng nhập</a>
           
-          <a href="#" class="nav-link"  onclick="blockForm('id02', 'id01', 'id03')" style="width:auto;">Đăng ký</a>
+          <a href="#" class="nav-link"  onclick="blockForm('idRegister', 'idLogin', 'id05')" style="width:auto;">Đăng ký</a>
           <% } else {%>
           <a href="/accounts/logout" class="nav-link">Đăng xuất</a>
           <% }%>
