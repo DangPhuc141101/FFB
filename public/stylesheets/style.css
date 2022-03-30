@@ -71,6 +71,7 @@ span.psw {
 }
 
 /* The Modal (background) */
+
 .modalLogin {
   display: none; /* Hidden by default */
   position:fixed; /* Stay in place */
@@ -83,7 +84,7 @@ span.psw {
   padding-top: 50px;
   border-radius: 15px;
   padding-left: 10%;
-}
+} */
 
 /* Modal Content/Box */
 .modalLogin-content {
