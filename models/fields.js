@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Review = require('./reviews');
 
 // Create image schema
 const imageSchema = new mongoose.Schema({
@@ -22,6 +23,7 @@ const fieldSchema = new mongoose.Schema({
     images: [imageSchema],
     address: String,
     utilities: [String],
+    times: [String],
     geometry: {
         type: {
             type: String,
@@ -35,8 +37,14 @@ const fieldSchema = new mongoose.Schema({
     },
     author: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
+        ref: 'Account'
     },
+    reviews: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Review'
+        }
+    ]
 })
 
 module.exports = mongoose.model('Field', fieldSchema);

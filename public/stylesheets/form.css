@@ -1,33 +1,19 @@
 body {font-family: Arial, Helvetica, sans-serif;}
 
 /* Full-width input fields */
-input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    resize: vertical;
-  }
+.inputInfor {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  resize: vertical;
+}
   
   label {
     padding: 12px 12px 12px 0;
     display: inline-block;
   }
   
-  input[type=submit] {
-    background-color: #04AA6D;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    float: right;
-  }
-  
-  input[type=submit]:hover {
-    background-color: #45a049;
-  }
-
   .col-25 {
     float: left;
     width: 25%;
@@ -65,14 +51,14 @@ button:hover {
 
 
 /* Center the image and position the close button */
-.cancelcontainer {
+.modal5 .cancelcontainer {
   text-align: center;
   margin: 24px 0 12px 0;
   position: relative;
   color: #000;
 }
 
-.container1 {
+.container5 {
   padding: 16px;
 }
 
@@ -82,7 +68,7 @@ span.psw {
 }
 
 /* The Modal (background) */
-.modal1 {
+.modal5 {
   display: none; /* Hidden by default */
   position:fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -97,7 +83,7 @@ span.psw {
 }
 
 /* Modal Content/Box */
-.modal1-content {
+.modal5-content {
   background-color: #fefefe;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
@@ -143,19 +129,39 @@ span.psw {
     margin-top: 0;
   }
 }
-.cancelbtn {
+.clearfix5 {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+/* Float cancel and submit buttons and add an equal width */
+.clearfix5 .cancelbtn5 {
     padding: 14px 20px;
     background-color: #f44336;
+    border-radius: 20px;
+    float: left;
+    width: 30%;
   }
   
-  /* Float cancel and submit buttons and add an equal width */
-  .cancelbtn, .submitbtn {
-    float: left;
-    width: 50%;
+  .clearfix5 .submitbtn5 {
+    background-color: #04AA6D;
+    /* color: white; */
+    padding: 14px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    float: right;
+    /* float: left; */
+    width: 30%;
+  }
+  
+  .clearfix5 .submitbtn5:hover {
+    background-color: #45a049;
   }
 
 /* Clear floats */
-.clearfix::after {
+.clearfix5 ::after {
     content: "";
     clear: both;
     display: table;
@@ -163,7 +169,7 @@ span.psw {
   
   /* Change styles for cancel button and signup button on extra small screens */
   @media screen and (max-width: 300px) {
-    .cancelbtn, .submitbtn {
+     .cancelbtn5, .submitbtn5 {
        width: 100%;
     }
   }

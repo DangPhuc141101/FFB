@@ -9,17 +9,21 @@ module.exports.createAccount = async(req, res) => {
     console.log("Register success!")
     req.login(registerAccount, err =>{
         if (err) return next(err);
-        res.redirect('/');
+        res.redirect('/fields');
     })
    }
    catch(e) {
        console.log(e);
    } 
-}
+ }
 
 // handle when user login to website
 module.exports.login = async(req, res) => {
-    res.redirect('/fields/');
+    res.redirect('/fields');
+}
+
+module.exports.loginForm = (req, res) => {
+    res.render('accounts/login');
 }
 
 module.exports.logout = (req, res) => {

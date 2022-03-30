@@ -6,7 +6,7 @@ const { storage } = require('../cloudinary');
 const upload = multer({storage});
 const catchAsync = require('../utils/catchAsyncError');
 const Fields = require('../models/fields');
-
+const { isLoggedIn } = require('../middleware');
 
 // router all field
 router.get('/', fields.index);
@@ -24,14 +24,14 @@ router.get('/owner', async(req, res) => {
     res.render('fields/owner/index', {fields})
 })
 // router detail field
-router.get('/:id', fields.show)
+router.get('/:id', isLoggedIn, fields.show)
 
 // router add field
 router.post('/', upload.array('images'), catchAsync(fields.createField))
 
-router.put('/', fields.editField)
+router.put('/:id', fields.editField)
 
-router.delete('/', fields.deleteField)
+router.delete('/:id', fields.deleteField)
 
 router.get('/:id/edit', (req, res) => {
     res.render('fields/edit');

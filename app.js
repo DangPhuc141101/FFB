@@ -12,7 +12,8 @@ const flash = require('connect-flash');
 const Account = require('./models/accounts');
 const path = require('path');
 const app = express();
-
+// const {createFakeData} = require('./seeds/index');
+// createFakeData();
 // Create server
 const http = require('http');
 const server = http.createServer(app);
@@ -54,6 +55,7 @@ passport.deserializeUser(Account.deserializeUser());
 
 app.use((req, res, next) => {
     res.locals.currentUser = req.user;
+    //console.log(req.user);
     res.locals.success = req.flash('success');
     res.locals.error = req.flash('error');
     next();
@@ -62,13 +64,14 @@ app.use((req, res, next) => {
 const fieldRouter = require('./routers/fields');
 const accountRouter = require('./routers/accounts');
 const bookingRouter = require('./routers/bookings');
-
+const reviewsRouter = require('./routers/reviews')
 // Test here 
 // app.get('/test', (req, res) => {
 //     res.render('fields/show');
 // })
 
 app.use('/fields', fieldRouter);
+app.use('/fields/:id/reviews', reviewsRouter);
 app.use('/:id/bookings', bookingRouter);
 app.use('/accounts', accountRouter);
 

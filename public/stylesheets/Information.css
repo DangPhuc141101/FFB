@@ -1,0 +1,135 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.page-content_info{ 
+  margin-left: 20%;
+  margin-right: 20%;
+}
+/* Full-width input fields */
+.inputInformation, select {
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  .submitbtn3 {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    float: right;
+    margin-top: 30px;
+    width: 20%;
+  }
+
+  .col-25-Info {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75-Info {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+
+  
+  /* Clear floats after the columns */
+  .rowInfo:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+button:hover {
+  opacity: 0.8;
+}
+/* Set a style for title apply*/
+.title-login{
+    border: 4px;
+    text-align: center;
+    padding: 10px;
+  }
+
+
+/* Center the image and position the close button */
+.cancelcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+  color: #000;
+}
+
+.container5 {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  
+}
+
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: rgb(0, 0, 0);
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 600px) {
+  .col-25-Info, .col-75-Info, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.clearfixInfo{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-left:15%;
+}
+/* Clear floats */
+.clearfixInfo::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Change styles for cancel button and signup button on extra small screens */
+  @media screen and (max-width: 300px) {
+     .submitbtn3 {
+       width: 100%;
+    }
+  }
