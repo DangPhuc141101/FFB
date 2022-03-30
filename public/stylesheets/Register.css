@@ -1,8 +1,12 @@
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
 
 /* Full-width input fields */
-input[type=text], input[type=password] {
+.input1 {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -13,19 +17,20 @@ input[type=text], input[type=password] {
 }
 
 /* Add a background color when the inputs get focus */
-input[type=text]:focus, input[type=password]:focus {
+.input1:focus,
+.input1:focus {
   background-color: #ddd;
   outline: none;
 }
 /* Set a style for title register */
-.title-register{
+.title-register {
   border: 4px;
   text-align: center;
 }
 
 /* Set a style for all buttons */
 button {
-  background-color: #2274E0;
+  background-color: #2274e0;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -35,7 +40,7 @@ button {
   opacity: 0.9;
 }
 
-.loginbtn{
+.loginbtn {
   border-radius: 20px;
   width: 200px;
   display: block;
@@ -48,7 +53,7 @@ button:hover {
 
 /* Extra styles for the register button */
 .registerbtn {
-  background-color: #2274E0;
+  background-color: #2274e0;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -71,15 +76,15 @@ button:hover {
   color: #000;
 }
 
-/* Add padding to container2 elements */
-.container2 {
+/* Add padding to containerRegister elements */
+.containerRegister {
   padding: 16px;
 }
 
 /* The Modal (background) */
-.modal2 {
+.modalRegister {
   display: none; /* Hidden by default */
-  position:absolute; /* Stay in place */
+  position: absolute; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
   top: 0;
@@ -94,7 +99,7 @@ button:hover {
 }
 
 /* Modal Content/Box */
-.modal2-content {
+.modalRegister-content {
   background-color: #fefefe;
   border: 1px solid #888;
   width: 60%;
@@ -107,7 +112,7 @@ hr {
   border: 1px solid #f1f1f1;
   margin-bottom: 25px;
 }
- 
+
 /* The Close Button (x) */
 .close {
   position: absolute;
@@ -136,8 +141,9 @@ hr {
   span.psw {
     display: block;
     float: none;
- }
-  .loginbtn, .registerbtn {
-     width: 100%;
+  }
+  .loginbtn,
+  .registerbtn {
+    width: 100%;
   }
 }

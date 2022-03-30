@@ -1,30 +1,40 @@
 *{
     font-family: arial;
 }
+h3{
+    text-align: center;
+}
+.page-content-title{
+    margin: 30px;
+}
 .page-content{
     
     display: flex;
 }
 .page-content-right{
-    justify-content : space between;
+    width: 65%;
     /* display: flex; */
 }
 .page-content-left{
-    justify-content : space between;
+    width: 35%;
 }
 .choose-image{
     border: 1px solid #000000;
     margin-top: 6px;
     margin-left: 20px;
     border-radius: 5px;
-    width: 110%;
-    height: 50%;
+    width: 100%;
+    
+    /* height: auto; */
+    overflow: auto; /* Enable scroll if needed */
+    
 }
 .choose-image input{
     /* margin-left: auto;
     margin-right: auto;
     text-align: center; */
     padding: 40px;
+    overflow: auto; /* Enable scroll if needed */
 }
 
 .row{
@@ -33,21 +43,26 @@
 }
 .labels{
     display: inline-block;
-    width: 130px;
+    width: 35%;
 
 }
 .row input{
-    width: 200px;
+    width: 65%;
 }
-.atTime{
-    display: flex;
+.container10{
+    /* display: flex; */
     border: 1px solid #000000;
     margin-top: 6px;
     margin-left: 20px;
     border-radius: 5px;
-    width: 110%;
-    font-size: 12px;
-    height: 50%;
+    width: 100%;
+    font-size: 14px;
+    /* height: 70%; */
+    overflow: auto; /* Enable scroll if needed */
+}
+.atTime{
+    display: flex;
+    overflow: auto; /* Enable scroll if needed */
 }
 .atTime .Time{
     padding: 10px;
@@ -55,65 +70,69 @@
 .atTime .Time .prices{
     width: 70px;
 }
-.submitbtn{
+.submitbtn3{
     background-color: #1890ff;
     color: white;
-    font-size: 12px;
+    font-size: 14px;
     border: none;
     border-radius: 5px;
-    height: 23px;
+    height: auto;
     margin-top: auto;
     margin-bottom: auto;
 }
-.submitbtn:hover {
+.submitbtn3:hover {
     background-color: #0171da;
   }
 .modal4 {
-   
-    position: fixed; /* Stay in place */
+    position: absolute; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: #474e5d;
     padding-top: 50px;
   }
   
   /* Modal Content/Box */
-  .modal-content {
+  .modal4-content {
     background-color: #fefefe;
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
   }
+
+  /* Center the image and position the close button */
+.cancelcontainer2 {
+    text-align: center;
+    position:relative;
+    color: #000;
+  }
+
   /* The Close Button (x) */
-.close {
+.close2 {
     position: absolute;
     right: 35px;
-    top: 15px;
     font-size: 40px;
     font-weight: bold;
     color: #f1f1f1;
   }
   
-  .close:hover,
-  .close:focus {
+  .close2:hover, .close2:focus {
     color: #f44336;
     cursor: pointer;
   }
-  .btn-add{
+  .page-content-title .btn-add{
+    position: relative;
     background-color: #1890ff;
     color: white;
-    font-size: 14px;
+    font-size: 16px;
     border: none;
-    border-radius: 5px;
-    height: 30px;
-    margin-top: auto;
-    margin-bottom: auto;
+    border-radius: 20px;
+    left:40%;
+    width: 20%;
 }
-.btn-add:hover {
+.btn-add:hover, .btn-add:focus {
     background-color: #da4d01;
   }
 
