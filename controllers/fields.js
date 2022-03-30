@@ -7,7 +7,6 @@ module.exports.show =  async(req, res) => {
     console.log("show page")
     try {
         const { id } = req.params;
-        console.log(id)
         const field = await Fields.findById(id)
         .populate({
             path: 'reviews',
@@ -17,7 +16,6 @@ module.exports.show =  async(req, res) => {
         })
         .populate('author');
         //res.json(field);
-        console.log(`show page ${id}`)
         res.render('fields/show', {field});
     }
     catch (e)  {
@@ -28,9 +26,7 @@ module.exports.show =  async(req, res) => {
 // return json fields index
 module.exports.index = async(req, res) => {
     const fields = await Fields.find({});
-    console.log("index page");
     await res.render('fields/index', {fields});
-    console.log("index page3");
 }
 
 const getGeometry = async(input) => {
@@ -83,7 +79,6 @@ module.exports.createField = async(req, res) =>{
     const lastTime = [... new Set(times)];
     const input = req.body.field.address;
     const coordinates = await getGeometry(input);
-    console.log(prices);
     const geometry = {
         type: 'Point',
         coordinates : coordinates
