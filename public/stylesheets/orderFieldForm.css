@@ -27,42 +27,6 @@
      cursor: pointer;
    }
    
-   .orderField-Form--Time--dropdown--dropbtn:hover, .orderField-Form--Time--dropdown--dropbtn:focus {
-     background-color: #3e8e41;
-   }
-   
-   #myInput {
-     box-sizing: border-box;
-     background-position: 14px 12px;
-     background-repeat: no-repeat;
-     font-size: 16px;
-     padding: 14px 20px 12px 45px;
-     border: none;
-     border-bottom: 1px solid #ddd;
-   }
-   
-   .orderField-Form--Time--dropdown {
-     position: relative;
-     display: inline-block;
-   }
-   
-   .orderField-Form--Time--dropdown-content {
-     display: none;
-     position: absolute;
-     background-color: #f6f6f6;
-     width: 100px;
-     overflow: auto;
-     border: 1px solid #ddd;
-     z-index: 1;
-   }
-   
-   .orderField-Form--Time--dropdown-content p {
-     color: black;
-     padding: 6px 8px;
-     text-decoration: none;
-     display: block;
-   }
-   
    .show {display: block;}
 
    .orderField-Form--day--container, .orderField-Form--Time--container{
@@ -107,7 +71,24 @@
    }
    
    .orderField--title{
-     margin-left: 40%; 
+     margin-left: 0px; 
      position: relative;
-     top: 130px;
+     top: 0px;
    }
+
+   .cancelcontainer {
+    text-align: center;
+    height: 50px;
+    /* margin: 0 0 12px 0; */
+    position: relative;
+    color: #000;
+    bottom: 50px;
+  }
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: rgb(0, 0, 0);
+    font-size: 35px;
+    font-weight: bold;
+  }
