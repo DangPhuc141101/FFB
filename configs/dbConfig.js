@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const urlDB = process.env.LOCAL_DB || process.env.URL_DB;
 //process.env.URL_DB || 
-console.log(process.env.URL_DB)
+console.log(urlDB)
 const connectDB = ()=>{
     mongoose.connect('mongodb+srv://db-FFB:Zlgyw430AJbK4dZY@cluster0.ysved.mongodb.net/field-foot-ball?retryWrites=true&w=majority', {
         useNewUrlParser: true,
