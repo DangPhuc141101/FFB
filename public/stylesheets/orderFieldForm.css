@@ -1,0 +1,94 @@
+
+#orderField-Form{
+     width: 350px;
+     /* margin-left: calc((calc(100%-350px))/2);
+     margin-right: calc((calc(100%-350px))/2); */
+     margin: auto;
+     margin-top: calc(100vh/4);
+} 
+
+#orderField-Form--day--price{
+     width: 350px;
+     /* margin-left: calc((calc(100%-350px))/2);
+     margin-right: calc((calc(100%-350px))/2); */
+     margin: auto;
+}
+
+
+
+.orderField-Form--Time--dropdown--dropbtn {
+     background-color: #04AA6D;
+     color: white;
+     width: 30px;
+     height: 20px;
+     font-size: 10px;
+     text-align: center;
+     border: none;
+     cursor: pointer;
+   }
+   
+   .show {display: block;}
+
+   .orderField-Form--day--container, .orderField-Form--Time--container{
+        margin-bottom: 3px;
+   }
+
+   #orderField-Form--Time, #orderField-Form--day {
+     width: 200px;
+     padding: 12px;
+     border: 1px solid #ccc;
+     border-radius: 20px;
+     resize: vertical;
+   }
+
+   
+   .order-field-row{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 10px;
+        width: 100%;
+   }
+
+   .label--container{
+        width: 100px;
+   }
+
+   .orderField--btn{
+     
+          background-color: #EC1717; /* Green */
+          border: none;
+          color: white;
+          padding: 8px 16px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          border-radius: 8px;
+          margin-left: calc(calc((calc(100%-350px))/2) + 70px); 
+          margin-top: 10px;
+        
+   }
+   
+   .orderField--title{
+     margin-left: 0px; 
+     position: relative;
+     top: 0px;
+   }
+
+   .cancelcontainer {
+    text-align: center;
+    height: 50px;
+    /* margin: 0 0 12px 0; */
+    position: relative;
+    color: #000;
+    bottom: 50px;
+  }
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: rgb(0, 0, 0);
+    font-size: 35px;
+    font-weight: bold;
+  }
