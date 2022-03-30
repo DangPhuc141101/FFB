@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const urlDB = process.env.LOCAL_DB || process.env.URL_DB;
 //process.env.URL_DB || 
-console.log(process.env.URL_DB)
+console.log(urlDB)
 const connectDB = ()=>{
     mongoose.connect(urlDB, {
         useNewUrlParser: true,

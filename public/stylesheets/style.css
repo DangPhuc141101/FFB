@@ -71,8 +71,8 @@ span.psw {
 }
 
 /* The Modal (background) */
-.modal1 {
-  display: none; /* Hidden by default */
+ .modal1 {
+  display: none; /*Hidden by default */
   position:fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
@@ -83,7 +83,7 @@ span.psw {
   padding-top: 50px;
   border-radius: 15px;
   padding-left: 10%;
-}
+} */
 
 /* Modal Content/Box */
 .modal1-content {

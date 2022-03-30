@@ -62,7 +62,7 @@
     <%let i=0; for (let field of fields){ %>
         <div class="field-card card">
             <div class="field-card__header">
-                <img src="https://cdn.pixabay.com/photo/2020/06/30/19/42/the-soccer-field-5357418_1280.jpg" alt=""
+                <img src="<%=field.images[0].url%>" alt=""
                     class="field-card__header__img" />
             </div>
         
@@ -93,4 +93,4 @@
         <% }%>
 </div>
 
-<script src="/javaScript/dropDownFormJs.js"></script>
+<script src="/javascripts/dropDownFormJs.js"></script>
