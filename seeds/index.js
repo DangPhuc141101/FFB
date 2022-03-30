@@ -7,14 +7,14 @@ connectDB();
 
 const n = 20;
 
-const createFakeData = async(n) => {
+module.exports.createFakeData = async(n) => {
     Field.deleteMany({})
         .then(() => {
             console.log("sucess!")
         });
     await Account.deleteMany({});
     const email = 'admin@gmail.com', username = '012345', password = 'admin';
-    const user = new Account({ email, phone : username, username });
+    const user = new Account({ email, phone : username, username, accountType : 'Admin' });
     const registerUser = await Account.register(user, password);
     await user.save();
     for (let i = 0; i < 20; i++) {
@@ -37,14 +37,14 @@ const createFakeData = async(n) => {
             description: 'Tọa lạc tại vị trí đắc địa ngay trung tâm Đà Nẵng',
             images: [
                 {
-                    url: 'https://res.cloudinary.com/duy-t-n/image/upload/v1637834390/YelpCamp/b9qfhvaaiyrcwf6adoev.jpg',
-                    filename: 'YelpCamp/b9qfhvaaiyrcwf6adoev',
+                    url: 'https://res.cloudinary.com/duy-t-n/image/upload/v1648345004/FieldFootBall/tp5ubbxl7jwnzds1spvs.jpg',
+                    filename: 'FieldFootBall/tp5ubbxl7jwnzds1spvs',
                   },
                   {
-                    url: 'https://res.cloudinary.com/duy-t-n/image/upload/v1637834398/YelpCamp/jskii6ieit1nzt2egpkd.jpg',
-                    filename: 'YelpCamp/jskii6ieit1nzt2egpkd',
+                    url: 'https://res.cloudinary.com/duy-t-n/image/upload/v1648344478/FieldFootBall/ylamtjcpx0mvbuzzwavb.jpg',
+                    filename: 'FieldFootBall/ylamtjcpx0mvbuzzwavb',
                   }
-            ],
+            ], 
             utilities: 'Wifi, Giày',
             geometry : {
                 type : 'Point',
@@ -62,4 +62,4 @@ const createFakeData = async(n) => {
     }
 }
 
-createFakeData();
+// createFakeData();

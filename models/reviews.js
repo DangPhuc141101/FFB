@@ -4,11 +4,11 @@ const mogoose = require('mongoose');
 // Create reviewSchema
 const reviewSchema = new mongoose.Schema({
     rating: Number,
-    commnent: String,
+    body: String,
     author: {
-        type: Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'Account'
     }
 })
 
-module.exports = mongoose.Model('Review', reviewSchema);
+module.exports = mongoose.model('Review', reviewSchema);

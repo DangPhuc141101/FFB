@@ -1,0 +1,8 @@
+<% layout('layouts/boilerplate') %>
+<p>We have sent you a verifycation code!</p>
+<p>Please enter the code here </p>
+<form action="/bookings/verify" method="post">
+    <input type="hidden" name="id" value="<%=id%>">
+    <input type="text" name="token">
+    <input type="submit" value="check code">
+</form>
