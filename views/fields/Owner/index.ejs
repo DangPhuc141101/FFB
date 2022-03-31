@@ -1,11 +1,12 @@
 <link href="/stylesheets/index.css" rel="stylesheet" type="text/css">
+<link href="/stylesheets/new.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <% layout('layouts/boilerplate') %>
 
     <div class="field-header_title">
     <p><b>SÂN BÓNG ĐÁ</b></p>
-    <button class="btn-add-field" onclick="">Thêm sân</button>
+    <button class="btn-add-field" onclick="display()">Thêm sân</button>
     </div>
     <div class="index-page-container">   
 
@@ -65,4 +66,101 @@
             </div>
         <%}%>
     </div>
+    <div id="id04" class="modal4" style="display: none;">
+        <form class="modal4-content" action="/fields" method="POST" enctype="multipart/form-data">
+            <div class="cancelcontainer2">
+                <span onclick="document.getElementById('id04').style.display='none'" class="close2" title="Thoát">&times;</span>
+              </div>
+        <div class="page-content-title">
+            <h3>Thêm sân</h3>
+            <div class="page-content">
+                <div class="page-content-left">
+                    <div class="row">
+                        <label for="name" class="labels">Tên sân bóng:</label>
+                        <input type="text" id="name" name="field[name]" placeholder="Tên sân bóng" require>
+                    </div>
+
+                    <div class="row">
+                        <label for="category" class="labels">Số người: </label>
+                        <input type="number" id="category" name="field[category]" placeholder="Số người" min=5 require>
+                    </div>
+
+                    <div class="row">
+                        <label for="address" class="labels">Địa điểm: </label>
+                        <input type="text" id="address" name="field[address]" placeholder="Địa điểm" require>
+                    </div>
+
+                    <div class="row">
+                        <label for="utilities" class="labels">Tiện ích: </label>
+                        <input type="text" id="utilities" name="field[utilities]" placeholder="Tiện ích">
+                    </div>
+
+                    <div class="row">
+                        <label for="description" class="labels">Mô tả: </label>
+                        <textarea id="subject" name="field[description]" placeholder="Mô tả..."
+                            style="height:100px; width: 65%;"></textarea>
+                    </div>
+                </div>
+                <div class="page-content-right">
+                    <div class="choose-image">
+                        <div class="input-group">
+                            <input type="file" class="form-control" id="images" name="images" aria-describedby="images"
+                                aria-label="Upload" multiple>
+                        </div>
+                    </div>
+                   
+                    <div class="container10" id="time">
+                        <div class="atTime">
+                            <div class="Time">
+                                <label for="startTime" class="Time">Giờ bắt đầu: </label>
+                                <input type="time" id="startTime" name="price[start]" min="00:00" max="23:59" required>
+                            </div>
+                            <div class="Time">
+                                <label for="endTime" class="Time">Giờ kết thúc: </label>
+                                <input type="time" id="endTime" name="price[end]" min="00:00" max="23:59" required>
+                            </div>
+                            <div class="Time">
+                                <label for="price" class="Time">Giá: </label>
+                                <input class="prices" type="number" id="price" name="price[price]" min="100 000" required>
+                                <label for="price" class="Time">VND </label>
+                            </div>
+                            <div class="button">
+                                <button class="submitbtn3" id="add-input-price" type="button">Thêm giá</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <button type="submit" class="btn-add">Thêm sân</button>
+        </div>
+        </form>
+    </div>
+    <script src="/javascripts/jquery-3.6.0.min.js"></script>
+    <script src="/javascripts/insertInputPrice.js"></script>
+    <script>
+        // Get the modal4
+        var modal4 = document.getElementById('id04');
+        function display()
+        {
+            modal4.style.display = "block";
+        }
+        // When the user clicks anywhere outside of the modal4, close it
+        window.onclick = function (event) {
+            if (event.target == modal4) {
+                modal4.style.display = "none";
+            }
+        }
+    </script>
+    <script>
+        // Get the modal4
+        var modal5 = document.getElementById('id05');
+        // When the user clicks anywhere outside of the modal4, close it
+        window.onclick = function (event) {
+            if (event.target == modal5) {
+                modal5.style.display = "none";
+            }
+        }
+    </script>
 

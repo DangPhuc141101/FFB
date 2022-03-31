@@ -4,62 +4,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <% layout('layouts/boilerplate') %>
 
-<div class="search-dropdown-container">
-    <div class="dropdown">
-        <!-- <button onclick="myFunction()" class="dropbtn"> -->
-        <button class="dropbtn">
-            <div id="choosen" class="choosen3">Dropdown</div>
-            <div><i class="bi bi-caret-down-fill"></i></div>
-        </button>
-        <div id="myDropdown" class="dropdown-content">
-            <input
-                type="text"
-                placeholder="Search.."
-                id="myInput"
-                onkeyup="filterFunction()"
-            />
-            <a class="option" href="#about">About</a>
-            <a class="option" href="#base">Base</a>
-            <a class="option" href="#blog">Blog</a>
-            <a class="option" href="#contact">Contact</a>
-            <a class="option" href="#custom">Custom</a>
-            <a class="option" href="#support">Support</a>
-            <a class="option" href="#tools">Tools</a>
-        </div>
-    </div>
-    <div class="dropdown">
-        <!-- <button onclick="myFunction()" class="dropbtn"> -->
-        <button class="dropbtn">
-            <div id="choosen1">Dropdown</div>
-            <div><i class="bi bi-caret-down-fill"></i></div>
-        </button>
-        <div class="dropdown-content-container">
-            <div id="myDropdown1" class="dropdown-content">
-                <input
-                    type="text"
-                    placeholder="Search.."
-                    id="myInput"
-                    onkeyup="filterFunction()"
-                />
-                <a class="option" href="#about">About</a>
-                <a class="option" href="#base">Base</a>
-                <a class="option" href="#blog">Blog</a>
-                <a class="option" href="#contact">Contact</a>
-                <a class="option" href="#custom">Custom</a>
-                <a class="option" href="#support">Support</a>
-                <a class="option" href="#tools">Tools</a>
-            </div>
-        </div>
-    </div>
-    <div class="dropdown">
-        <!-- <button onclick="myFunction()" class="dropbtn"> -->
-        <input id="input-nameField" class="dropbtn" type="text" placeholder="nhập tên sân">
-    </div>
-    <div class="submit-searchForm">
-        <button class="submit-searchForm__btn">tìm kiếm</button>
-    </div>
-</div>
-
 <div class="index-page-container">
     <%let i=0; for (let field of fields){ %>
         <div class="field-card card">

@@ -1,5 +1,6 @@
 const Fields = require('../models/fields');
 const axios = require('axios');
+const Bookings = require('../models/booking_fields');
 const API_KEY = process.env.API_KEY;
 
 // return json field detail
@@ -98,12 +99,40 @@ module.exports.createField = async(req, res) =>{
 module.exports.deleteField = async(req, res) =>{
     const { id } = req.params;
     const field = await Fields.findByIdAndDelete(id);
-    req.flash('success', 'Successfully deleted Camground!')
+    req.flash('success', 'Successfully deleted field!')
     res.redirect('/fields/owner');
 }
 
 module.exports.editField = async(req, res) => {
-    const { price } = req.body;
-    const { address } = req.body;
-    const { name, category, description} = req.body.field;
+    const { start, end, price } = req.body.price;
+    const prices = [];
+    const times = [];
+    for (let i = 0; i<price.length; i++)
+    {
+        prices.push({start:start[i], end:end[i], price:price[i]});
+        const time = getTime(start[i], end[i]);
+        times.push(...time);
+    }
+    const lastTime = [... new Set(times)];
+    const input = req.body.field.address;
+    const coordinates = await getGeometry(input);
+    const geometry = {
+        type: 'Point',
+        coordinates : coordinates
+    }
+
+    const field = await Fields.findByIdAndUpdate(req.params.id, req.body.field, {runValidators: true, new: true});
+    const images = req.files.map(f => ({url: f.path, filename: f.filename }));
+    field.images.push(...images);
+    field.prices.push(...prices);
+    field.geometry = geometry;
+    field.times.push(...lastTime);
+    await field.save();
+    if (req.body.deleteImages) {
+        for(let filename of req.body.deleteImages) {
+            await cloudinary.uploader.destroy(filename);
+        }
+        await campground.updateOne({ $pull: {images: {filename: { $in: req.body.deleteImages } } } });
+    }
+    req.flash('success', 'Successfully updated Field!')
 }

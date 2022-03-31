@@ -6,16 +6,14 @@ const bookingFieldSchema = new mongoose.Schema({
     status :{
         type: String,
         enum: ['Confirmed', 'Canceled', 'Ticketed', 'Voided'],
-        default: 'Ticketed'
+        default: 'Confirmed'
     },
     date_booking : {
         type: Date
     },
-    price : {
-        start: String,
-        end: String,
-        price: Number
-    },
+    time : String,
+    price : Number,
+    otp: String,
     field : {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Field'

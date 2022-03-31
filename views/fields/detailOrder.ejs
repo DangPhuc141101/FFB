@@ -1,0 +1,42 @@
+<link href="/stylesheets/detailField.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+<% layout('layouts/boilerplate') %>
+<h2>THÔNG TIN SÂN ĐÃ ĐẶT</h2>
+<hr />
+<div class="page-content">
+<% for (let booking of bookings ){%>
+  <div class="page-content_bottom-body">
+    <img src="<%=(booking.field.images[0].url || "")%>" alt="anhbongda"/>
+    <div class="detail-field_order">
+        <div class="name-field_order"><%=booking.field.name%></div>
+        <div class="time-field_order">
+            <label>Giờ đá:&nbsp; <%=booking.time%></label>
+        </div>
+  
+        <div class="people-number_order">
+            <label>Số người: <%=booking.field.category%>&nbsp;</label>
+        </div>
+        <div class="people-number_order">
+          <label>Địa chỉ: <%=booking.field.address%>&nbsp;</label>
+      </div>
+    </div>
+  </div>
+  <div class="bill_order">
+    <div class="into-money_order">
+        <label>Thành tiền: <%=booking.price%></label>
+    </div>
+    <div class="payment-method_order">
+        <label>Phương thức thanh toán:</label>
+        <div>Tiền mặt</div>
+    </div>
+    <div class="btn_order">
+      <a href="#"><button class="btn" style="background-color: #2D9AFF;"><i class="bi bi-envelope"></i> &nbsp; Liên hệ</button></a> 
+      <form action="/bookings/delete/<%=booking._id%>?_method=DELETE" method="post">
+       <button class="btn" style="background-color: #EC1717;">Huỷ sân</button>
+      </form>
+  </div>
+  <%}%>
+  
+</div>
+</div>

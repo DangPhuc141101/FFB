@@ -7,6 +7,10 @@ const imageSchema = new mongoose.Schema({
     filename: String
 })
 
+imageSchema.virtual('thumb').get(function() {
+    return this.url.replace('/upload', '/upload/w_200');
+}) 
+
 // Create price schema
 const priceSchema = new mongoose.Schema({
     start: String,
@@ -45,6 +49,6 @@ const fieldSchema = new mongoose.Schema({
             ref: 'Review'
         }
     ]
-})
+},{ toJSON : { virtuals: true }})
 
 module.exports = mongoose.model('Field', fieldSchema);
