@@ -4,52 +4,6 @@
 <link rel="stylesheet" href="/stylesheets/stars.css">
 <% layout('layouts/boilerplate') %>
 
-  <div class="search-dropdown-container">
-    <div class="dropdown">
-      <!-- <button onclick="myFunction()" class="dropbtn"> -->
-      <button class="dropbtn">
-        <div id="choosen" class="choosen3">Dropdown</div>
-        <div><i class="bi bi-caret-down-fill"></i></div>
-      </button>
-      <div id="myDropdown" class="dropdown-content">
-        <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()" />
-        <a class="option" href="#about">About</a>
-        <a class="option" href="#base">Base</a>
-        <a class="option" href="#blog">Blog</a>
-        <a class="option" href="#contact">Contact</a>
-        <a class="option" href="#custom">Custom</a>
-        <a class="option" href="#support">Support</a>
-        <a class="option" href="#tools">Tools</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <!-- <button onclick="myFunction()" class="dropbtn"> -->
-      <button class="dropbtn">
-        <div id="choosen1">Dropdown</div>
-        <div><i class="bi bi-caret-down-fill"></i></div>
-      </button>
-      <div class="dropdown-content-container">
-        <div id="myDropdown1" class="dropdown-content">
-          <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()" />
-          <a class="option" href="#about">About</a>
-          <a class="option" href="#base">Base</a>
-          <a class="option" href="#blog">Blog</a>
-          <a class="option" href="#contact">Contact</a>
-          <a class="option" href="#custom">Custom</a>
-          <a class="option" href="#support">Support</a>
-          <a class="option" href="#tools">Tools</a>
-        </div>
-      </div>
-    </div>
-    <div class="dropdown">
-      <!-- <button onclick="myFunction()" class="dropbtn"> -->
-      <input id="input-nameField" class="dropbtn" type="text" placeholder="nhập tên sân">
-    </div>
-    <div class="submit-searchForm">
-      <button class="submit-searchForm__btn">Tìm kiếm</button>
-    </div>
-  </div>
-
   <div class="detail-page detail-page-container">
     <div class="detail-page__header">
       <!-- <div class="detail-page__header__path">
@@ -61,9 +15,7 @@
           <div>⭐⭐⭐⭐⭐</div>
         </div>
         <div class="detail-page__header--order__button">
-          <button class="detail-page__header--order__button--btn">
-            Đặt sân
-          </button>
+          <a class="btn btn-danger mt-5 mr-10" href="/bookings/<%=field._id%>">Đặt sân</a>
         </div>
       </div>
     </div>
@@ -80,7 +32,7 @@
 
           <!-- The slideshow/carousel -->
           <div class="carousel-inner">
-            <% field.images.forEach((img, i) => {console.log(img) %>
+            <% field.images.forEach((img, i) => { %>
               <div class="carousel-item <%= i===0 ? 'active' : ''%>">
                 <img src="<%=img.url%>" class="d-block w-100" alt="...">
               </div>

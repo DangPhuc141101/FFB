@@ -32,9 +32,13 @@ router.post('/', upload.array('images'), catchAsync(fields.createField))
 router.put('/:id', fields.editField)
 
 router.delete('/:id', fields.deleteField)
-
-router.get('/:id/edit', (req, res) => {
-    res.render('fields/edit');
+router.post('/times/:id', async (req,res)=>{
+    const field = await Fields.findById(req.params.id);
+    res.json({data:field.prices});
+})
+router.get('/:id/edit', async (req, res) => {
+    const field = await Fields.findById(req.params.id);
+    res.render('fields/edit', {field});
 })
 
 module.exports = router;

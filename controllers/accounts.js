@@ -19,6 +19,7 @@ module.exports.createAccount = async(req, res) => {
 
 // handle when user login to website
 module.exports.login = async(req, res) => {
+    console.log("login sucesss")
     res.redirect('/fields');
 }
 

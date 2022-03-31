@@ -72,7 +72,7 @@ const reviewsRouter = require('./routers/reviews')
 
 app.use('/fields', fieldRouter);
 app.use('/fields/:id/reviews', reviewsRouter);
-app.use('/:id/bookings', bookingRouter);
+app.use('/bookings', bookingRouter);
 app.use('/accounts', accountRouter);
 
 app.get('/', (req, res) => {
